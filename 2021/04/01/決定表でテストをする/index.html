@@ -10,12 +10,9 @@
 
     <!--Description-->
     
-        <meta name="description" content="はじめに最近の業務で解消したOracleエラーを振り返ります。
-Oracleのバージョン12c
-エラーコードORA-00054
-詳細
-
-ORA-00054: resource busy and acquire with NOWAIT specified or timeout expiredCause">
+        <meta name="description" content="はじめに複雑な条件・動作がある機能のテストをする際に有効な手法、決定表を使用したテスト（ディシジョンテーブルテスト）について説明します。
+決定表とはすべての条件と、その条件に対する動作または出力を明記した表です。テストケースや要件の整理で使用します。
+決定表の見方・書き方決定表の見方上半分が条件部、">
     
 
     <!--Author-->
@@ -25,7 +22,7 @@ ORA-00054: resource busy and acquire with NOWAIT specified or timeout expiredCau
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="業務で解消したOracleエラーを振り返る"/>
+        <meta property="og:title" content="決定表でテストをする"/>
     
 
     <!--Open Graph Description-->
@@ -47,7 +44,7 @@ ORA-00054: resource busy and acquire with NOWAIT specified or timeout expiredCau
 
     <!-- Title -->
     
-    <title>業務で解消したOracleエラーを振り返る - SkyleafBlog</title>
+    <title>決定表でテストをする - SkyleafBlog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -116,8 +113,8 @@ ORA-00054: resource busy and acquire with NOWAIT specified or timeout expiredCau
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">業務で解消したOracleエラーを振り返る</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-02-03</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">決定表でテストをする</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-04-01</p>
         </div>
     </div>
 
@@ -137,40 +134,26 @@ ORA-00054: resource busy and acquire with NOWAIT specified or timeout expiredCau
                     
 
                     <!-- Main Post Content -->
-                    <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>最近の業務で解消したOracleエラーを振り返ります。</p>
-<h2 id="Oracleのバージョン"><a href="#Oracleのバージョン" class="headerlink" title="Oracleのバージョン"></a>Oracleのバージョン</h2><p>12c</p>
-<h2 id="エラーコード"><a href="#エラーコード" class="headerlink" title="エラーコード"></a>エラーコード</h2><h3 id="ORA-00054"><a href="#ORA-00054" class="headerlink" title="ORA-00054"></a>ORA-00054</h3><ul>
-<li><p>詳細</p>
-<blockquote>
-<p>ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired<br>Cause: Interested resource is busy.<br>Action: Retry if necessary or increase timeout.<br>（翻訳）<br>ORA-00054: リソースがビジー状態で、NOWAITが指定されているか、タイムアウトが切れている状態で取得しました。<br>原因: リソースがビジー状態です。<br>アクション: 必要に応じて再試行するか、タイムアウトを増やしてください。</p>
-</blockquote>
-</li>
-<li><p>直接的な原因<br>原因は、TRUNCATE TABLEを実行するときに前のトランザクションが終了していなかったことです。前のトランザクションが終了していなかった原因は、パフォーマンスの悪いSELECT文で数万件のレコードを処理しようとしたことです。</p>
-</li>
-<li><p>対処<br>SELECT文のパフォーマンスを改善しました。</p>
-</li>
+                    <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>複雑な条件・動作がある機能のテストをする際に有効な手法、決定表を使用したテスト（ディシジョンテーブルテスト）について説明します。</p>
+<h2 id="決定表とは"><a href="#決定表とは" class="headerlink" title="決定表とは"></a>決定表とは</h2><p>すべての条件と、その条件に対する動作または出力を明記した表です。テストケースや要件の整理で使用します。</p>
+<h2 id="決定表の見方・書き方"><a href="#決定表の見方・書き方" class="headerlink" title="決定表の見方・書き方"></a>決定表の見方・書き方</h2><h3 id="決定表の見方"><a href="#決定表の見方" class="headerlink" title="決定表の見方"></a>決定表の見方</h3><p>上半分が条件部、下半分が動作部です。1列を1ケースとして、条件・動作毎に記号を記入します。</p>
+<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401201702_6c616952.png" alt="決定表1"></p>
+<h3 id="記号の意味"><a href="#記号の意味" class="headerlink" title="記号の意味"></a>記号の意味</h3><p>N：No<br>Y：Yes<br>X：execute（実行）<br>‐：条件部の場合は考慮しないこと、動作部の場合は動作しないことを表します。</p>
+<h3 id="例1-入場制限の場合"><a href="#例1-入場制限の場合" class="headerlink" title="例1 入場制限の場合"></a>例1 入場制限の場合</h3><p>ある博物館で土日の混雑しやすい時間帯に入場制限を行うとします。</p>
+<p>決定表は次の通りです。</p>
+<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401203442_306f7878.png" alt="決定表2"></p>
+<h3 id="例2-ブログ記事投稿前の確認の場合"><a href="#例2-ブログ記事投稿前の確認の場合" class="headerlink" title="例2 ブログ記事投稿前の確認の場合"></a>例2 ブログ記事投稿前の確認の場合</h3><p>このブログの仕様を元に決定表を書く場合で考えます。<br>仕様は次の通りだとします。</p>
+<ul>
+<li>記事のテーマはITに関わるものとする</li>
+<li>記事に誤りやレイアウトの乱れがあれば修正し、なければ投稿する</li>
 </ul>
-<h3 id="ORA-01861"><a href="#ORA-01861" class="headerlink" title="ORA-01861"></a>ORA-01861</h3><ul>
-<li><p>詳細</p>
-<blockquote>
-<p>ORA-01861: literal does not match format string<br>Cause: Literals in the input must be the same length as literals in the format string (with the exception of leading whitespace). If the “FX” modifier has been toggled on, the literal must match exactly, with no extra whitespace.<br>Action: Correct the format string to match the literal.<br>（翻訳）<br>ORA-01861: リテラルがフォーマット文字列と一致しない<br>原因: 入力のリテラルは、フォーマット文字列のリテラルと同じ長さでなければなりません（先頭の空白を除いて）。FX” 修飾子がトグルされている場合、リテラルは正確に一致しなければなりません。<br>アクション: フォーマット文字列をリテラルと一致するように修正します。</p>
-</blockquote>
-</li>
-<li><p>直接的な原因<br>原因は、1つのSELECT文の中で、TO_DATE関数に日付書式を指定がある場合とない場合が混在していたことでした。日付書式の指定がない場合には、暗黙の型変換が行われ、日付書式を指定した場合とは別の書式が設定されていました。</p>
-</li>
-<li><p>対処<br>SELECT文中のすべてのTO_DATE関数使用時に、日付書式を指定するようにしました。</p>
-</li>
-</ul>
-<h3 id="ORA-00933"><a href="#ORA-00933" class="headerlink" title="ORA-00933"></a>ORA-00933</h3><ul>
-<li>詳細<blockquote>
-<p>ORA-00933: SQL command not properly ended<br>（翻訳）<br>ORA-00933. SQLコマンドが正しく終了しない</p>
-</blockquote>
-</li>
-<li>直接的な原因<br>原因は、SQL文をJavaのプロパティファイルに記載するためにDBViewerで非整形文にした後、末尾の”;”を削除し忘れたことです。末尾に’;’があると、環境によってはエラーが発生します。エラーは例えばSQL文をODBCから呼び出して使う際に発生します。SQL文をSQL*PlusやDBViewerから直接実行するときは発生しません。</li>
-<li>対処<br>末尾の’;’を削除しました。</li>
-</ul>
-<h2 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h2><p>Oracleのエラーは環境によって発生有無が変化するので注意が必要です。<br>エラーを振り返ることで、知識に肉付けができます。</p>
-<h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/cd/E82638_01/errmg/index.html">https://docs.oracle.com/cd/E82638_01/errmg/index.html</a></p>
+<p>決定表は次の通りです。</p>
+<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401203442_4452414b.png" alt="決定表3"></p>
+<h2 id="決定表の用途"><a href="#決定表の用途" class="headerlink" title="決定表の用途"></a>決定表の用途</h2><p>決定表の使用が適しているのは、例1、例2のように確認すべき項目が少ない場合、または一部の項目のみを確認する場合です。複数の条件・動作が絡み合うテストケースを表にまとめることで、全体が見やすくなり、漏れやダブりを発見しやすくなります。その一方で、確認すべき項目が多い場合の使用は困難です。例えば例1の博物館で、土日の入場制限に加え、曜日に関わらず実際に混雑している場合に入場制限を行うとします。</p>
+<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401201922_6f774867.png" alt="決定表4"></p>
+<p>条件を1つ加えるだけで、テストケース数が2倍になります。このように決定表の難点は、条件・動作が増える毎にテストケース数が膨れ上がり、作ることも使うことも難しくなる点です。</p>
+<h2 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h2><p>複雑な入出力のテストをする際には、決定表を活用することでテストの負担を減らすことができます。</p>
+<h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p>高橋寿一（2013）『知識ゼロから学ぶソフトウェアテスト【改訂版】』 翔泳社<br>橋本裕史（2017）『情報処理教科書 出るとこだけ！基本情報技術者[午後]第2版』国宝社</p>
 
                     
                     <!-- Tags Bottom -->
