@@ -10,9 +10,14 @@
 
     <!--Description-->
     
-        <meta name="description" content="はじめに複雑な条件・動作がある機能のテストをする際に有効な手法、決定表を使用したテスト（ディシジョンテーブルテスト）について説明します。
-決定表とはすべての条件と、その条件に対する動作または出力を明記した表です。テストケースや要件の整理で使用します。
-決定表の見方・書き方決定表の見方上半分が条件部、">
+        <meta name="description" content="ファイル・ディレクトリ操作を行う基本的なLinuxコマンド
+
+
+
+
+1. Linuxを初めて扱うときの問題
+WindowsやMacでは、ファイルやフォルダの操作をグラフィック、マウスポインタなど視覚的かつ直感的なアプローチから行える。
+一方Linuxでは、全ての操作をコマンドという文字の入力(以降「">
     
 
     <!--Author-->
@@ -22,7 +27,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="決定表でテストをする"/>
+        <meta property="og:title" content="Linuxコマンドの視覚表現による構造理解の促進"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +49,7 @@
 
     <!-- Title -->
     
-    <title>決定表でテストをする - SkyleafBlog</title>
+    <title>Linuxコマンドの視覚表現による構造理解の促進 - SkyleafBlog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -113,8 +118,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">決定表でテストをする</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-04-01</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Linuxコマンドの視覚表現による構造理解の促進</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-06-08</p>
         </div>
     </div>
 
@@ -134,27 +139,262 @@
                     
 
                     <!-- Main Post Content -->
-                    <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>複雑な条件・動作がある機能のテストをする際に有効な手法、決定表を使用したテスト（ディシジョンテーブルテスト）について説明します。</p>
-<h2 id="決定表とは"><a href="#決定表とは" class="headerlink" title="決定表とは"></a>決定表とは</h2><p>すべての条件と、その条件に対する動作または出力を明記した表です。テストケースや要件の整理で使用します。</p>
-<h2 id="決定表の見方・書き方"><a href="#決定表の見方・書き方" class="headerlink" title="決定表の見方・書き方"></a>決定表の見方・書き方</h2><h3 id="決定表の見方"><a href="#決定表の見方" class="headerlink" title="決定表の見方"></a>決定表の見方</h3><p>上半分が条件部、下半分が動作部です。1列を1ケースとして、条件・動作毎に記号を記入します。</p>
-<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401201702_6c616952.png" alt="決定表1"></p>
-<h3 id="記号の意味"><a href="#記号の意味" class="headerlink" title="記号の意味"></a>記号の意味</h3><p>N：No<br>Y：Yes<br>X：execute（実行）<br>‐：条件部の場合は考慮しないこと、動作部の場合は動作しないことを表します。</p>
-<h3 id="例1-入場制限の場合"><a href="#例1-入場制限の場合" class="headerlink" title="例1 入場制限の場合"></a>例1 入場制限の場合</h3><p>ある博物館で土日の混雑しやすい時間帯に入場制限を行うとします。</p>
-<p>決定表は次の通りです。</p>
-<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401203442_306f7878.png" alt="決定表2"></p>
-<h3 id="例2-ブログ記事投稿前の確認の場合"><a href="#例2-ブログ記事投稿前の確認の場合" class="headerlink" title="例2 ブログ記事投稿前の確認の場合"></a>例2 ブログ記事投稿前の確認の場合</h3><p>このブログの仕様を元に決定表を書く場合で考えます。<br>仕様は次の通りだとします。</p>
-<ul>
-<li>記事のテーマはITに関わるものとする</li>
-<li>記事に誤りやレイアウトの乱れがあれば修正し、なければ投稿する</li>
-</ul>
-<p>決定表は次の通りです。</p>
-<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401203442_4452414b.png" alt="決定表3"></p>
-<h2 id="決定表の用途"><a href="#決定表の用途" class="headerlink" title="決定表の用途"></a>決定表の用途</h2><p>決定表の使用が適しているのは、例1、例2のように確認すべき項目が少ない場合、または一部の項目のみを確認する場合です。複数の条件・動作が絡み合うテストケースを表にまとめることで、全体が見やすくなり、漏れやダブりを発見しやすくなります。その一方で、確認すべき項目が多い場合の使用は困難です。例えば例1の博物館で、土日の入場制限に加え、曜日に関わらず実際に混雑している場合に入場制限を行うとします。</p>
-<p><img src="https://f.easyuploader.app/eu-prd/upload/20210401201922_6f774867.png" alt="決定表4"></p>
-<p>条件を1つ加えるだけで、テストケース数が2倍になります。このように決定表の難点は、条件・動作が増える毎にテストケース数が膨れ上がり、作ることも使うことも難しくなる点です。</p>
-<h2 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h2><p>複雑な入出力のテストをする際には、決定表を活用することでテストの負担を減らすことができます。</p>
-<h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p>高橋寿一（2013）『知識ゼロから学ぶソフトウェアテスト【改訂版】』 翔泳社<br>橋本裕史（2017）『情報処理教科書 出るとこだけ！基本情報技術者[午後]第2版』国宝社</p>
+                    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+<h1> ファイル・ディレクトリ操作を行う基本的なLinuxコマンド</h1>
+
+<br>
+<br>
+
+<h2>1. Linuxを初めて扱うときの問題</h2>
+<p>WindowsやMacでは、ファイルやフォルダの操作をグラフィック、マウスポインタなど視覚的かつ直感的なアプローチから行える。</p>
+<p>一方Linuxでは、全ての操作をコマンドという文字の入力(以降「コマンド操作」)のみで実現しているため、初めて扱うときに戸惑う人が大半だと考えられる。</p>
+<p>そこで、本記事では、コマンド操作をWindows、Macにおける従来の視覚的な表現とともに紹介することにより、いち早い理解を期待する。</p>
+<p>まず初めに、ファイルやフォルダ(Linuxでは「ディレクトリ」)の操作を紹介する。</p>
+
+<br>
+
+<h2>2. ファイル・ディレクトリの操作</h2>
+
+<p>本章では、なお、PCにサインインしているユーザ名は「User」とする。</p>
+<p>また、エクスプローラーの「C:Users:User」を起点(ホームディレクトリ)として例を紹介する。</p>
+
+<div class = "list1">2.1. pwd (print work directory)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list2">2.2. cd (change directory)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list3">2.3. mkdir (make directory)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list4">2.4. ls (list)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list5">2.5. mv (move)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list6">2.6. cp (copy)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list7">2.7. rm (remove)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list8">2.8. file</div>
+
+<div class = "listField">
+
+
+</div>
+
+<p>次回３.ではコマンドの拡張的な使用法を紹介する。</p>
+<h2 id="3-オプションを使ったコマンドの拡張-工事中"><a href="#3-オプションを使ったコマンドの拡張-工事中" class="headerlink" title="3. オプションを使ったコマンドの拡張(工事中)"></a>3. オプションを使ったコマンドの拡張(工事中)</h2><script>
+
+$(".listField").hide();
+
+$(function(){
+
+    $(document).ajaxStart(function (){
+
+        $.get("/pwd.txt");
+
+    });
+
+    $(document).ajaxError(function(event, XHR, set, ex){
+
+        alert(ex);
+
+    });
+
+    $(".list1").click(function(){
+
+        $.get("/pwd.txt", function(data,){
+
+            $(".list1").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list2").click(function(){
+
+        $.get("/cd.txt", function(data,){
+
+            $(".list2").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list3").click(function(){
+
+        $.get("/mkdir.txt", function(data,){
+
+            $(".list3").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list4").click(function(){
+
+        $.get("/ls.txt", function(data,){
+
+            $(".list4").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list5").click(function(){
+
+        $.get("/mv.txt", function(data,){
+
+            $(".list5").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list6").click(function(){
+
+        $.get("/cp.txt", function(data,){
+
+            $(".list6").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list7").click(function(){
+
+        $.get("/rm.txt", function(data,){
+
+            $(".list7").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list8").click(function(){
+
+        $.get("/file.txt", function(data,){
+
+            $(".list8").next().html(data).slideToggle()
+
+        });
+
+    });
+
+    $(".list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8").hover(function (){
+
+        $(this).css("backgroundColor", "lightgreen").css("color", "black");
+
+
+    },function(){
+
+        $(this).css("backgroundColor", "green").css("color", "white");
+
+
+    });
+
+    $(".list").hover(function() {
+        $(this).next("span").animate({opacity: "show", top: "-75"}, "slow");}, function() {
+      $(this).next("span").animate({opacity: "hide", top: "-85"}, "fast");
+    });
+
+});
+
+</script>
+
+<style type = "text/css">
+
+    #inputField {
+
+        background-color :#000000;
+        color :#ffffff;
+        width : 100%;
+
+    }
+
+    input {
+
+        background-color :#000000;
+        color :#ffffff;
+        width : 97.5%;
+
+    }
+
+    p {
+
+        font-family: "Arial", "メイリオ" ;
+
+    }
+
+    h1, h2, h3 {
+
+        font-family: "MS Pゴシック" ;
+
+    }
+
+    .list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8 {
+
+        background-color: green;
+        color : white;
+
+        padding-top : 8px;
+        padding-bottom : 8px;
+        padding-left : 8px;
+        margin-top : 4px;
+        font-size : 18px
+
+
+    }
+
+    .listField {
+
+        border-style: outset;
+        padding-left : 8px;
+        padding-right : 8px;
+
+    }
+
+    #example {
+
+        border-style : ridge;
+        padding-left : 8px;
+
+    }
+
+</style>
                     
                     <!-- Tags Bottom -->
                     

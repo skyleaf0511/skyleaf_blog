@@ -1,0 +1,25 @@
+
+cpコマンドは、指定のファイル・ディレクトリを指定の別ディレクトリへコピーする。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+
+<div id = "example"><h4>cp コピー元のファイルパス コピー先のディレクトリパス</h4></div>
+
+<br>
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3> $ <input type = text value = "cp home/User/Mucic/Skyleaf.mp3 home/User/Documents"></h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628172445_63456647.PNG?redirect=false">
+<img src = "https://f.easyuploader.app/20210628172530_67396f71.PNG?redirect=false">
+<br>
+例では、home/User/MusicディレクトリにあるSkyleaf.mp3をhome/User/Documentsディレクトリへコピーさせ、図では、C:\Users\User\MusicフォルダにあるSkyleaf.mp3をコピーし、C:\Users\User\Documentsフォルダに貼り付けている。
+
+<br><br>

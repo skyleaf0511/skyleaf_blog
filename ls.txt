@@ -1,0 +1,26 @@
+
+lsコマンドは、カレントディレクトリにあるファイル・ディレクトリを表示する。これによって、前節で実行したmkdirコマンドが正常に実行されたかの確認が出来る。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+
+<div id = "example"><h4>ls</h4></div>
+
+<br>
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3> $ <input type = text value = "ls"></input>
+New_Directory
+</h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628172246_70674d47.PNG?redirect=false">
+<br>
+例では、カレントディレクトリにあるNew_Directoryが結果として出力され、図では、C:\Users\User\Documentsフォルダ内に新しいフォルダが作成されたことを確認できる。
+
+<br><br>

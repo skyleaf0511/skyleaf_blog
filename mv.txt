@@ -1,0 +1,23 @@
+
+mvコマンドは、指定のファイル・ディレクトリを指定の別ディレクトリへ移動する。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+
+<div id = "example"><h4>mv 移動元のファイル・ディレクトリパス 移動先のディレクトリパス</h4></div>
+
+<br>
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3> $ <input type = text value = "mv home/User/Pictures /home/User/Documents"></input></h3>
+
+</div>
+<img src = "https://f.easyuploader.app/20210628172342_434d3348.PNG?redirect=false">
+<br>
+例では、home/User直下にあるPicturesディレクトリをhome/User直下のDocumentsディレクトリへ移動させ、図では、C:\Users\User\PicturesフォルダがC:\Users\User\Documentsフォルダに移されている。
+
+<br><br>

@@ -1,0 +1,26 @@
+fileコマンドは、ファイル・ディレクトリの種類を確認できる。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+
+<div id = "example"><h4>file 指定のファイル・ディレクトリパス</h4></div>
+
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3>
+ $ <input type = text value = "file home/User/Documents">
+ home/User/Documents : directory
+</h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628172650_52626873.PNG?redirect=false">
+<img src = "https://f.easyuploader.app/20210628172738_5a646353.PNG?redirect=false">
+<br>
+例では、home/User/Documentsディレクトリの種類がディレクトリであることを確認し、図では、C:\Users\User\Documentsフォルダのプロパティからファイルの種類がファルダであることが確認できる。
+
+<br><br>
