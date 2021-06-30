@@ -10,13 +10,12 @@
 
     <!--Description-->
     
-        <meta name="description" content="ブログ開設の経緯会社を通してブログを始めるまでの経緯を説明します。
-まず、身になる勉強をするために、アウトプットを増やしたいと考えました。勉強内容の整理をして記事執筆を行うことで、以下のメリットが得られます。
+        <meta name="description" content="システムを構成するサーバーの種類記事のねらい
+システム開発におけるサーバーを大まかに整理する
+3階層型アーキテクチャのサーバーの種類を整理する
+参画するプロジェクトで扱うシステムについて理解しやすくする
 
-文書作成、情報伝達の練習
-内容のより深い理解
-
-会社を通すことで、執筆内容の質を担保する">
+サーバーとは？分割型アーキテクチャ（複数のコンピュータを組み合わせて1つのシステムを構築する仕">
     
 
     <!--Author-->
@@ -26,7 +25,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="ブログ開設の経緯"/>
+        <meta property="og:title" content="システムを構成するサーバーの種類"/>
     
 
     <!--Open Graph Description-->
@@ -48,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>ブログ開設の経緯 - SkyleafBlog</title>
+    <title>システムを構成するサーバーの種類 - SkyleafBlog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -117,8 +116,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">ブログ開設の経緯</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-01-15</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">システムを構成するサーバーの種類</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-05-12</p>
         </div>
     </div>
 
@@ -138,15 +137,29 @@
                     
 
                     <!-- Main Post Content -->
-                    <h2 id="ブログ開設の経緯"><a href="#ブログ開設の経緯" class="headerlink" title="ブログ開設の経緯"></a>ブログ開設の経緯</h2><p>会社を通してブログを始めるまでの経緯を説明します。</p>
-<p>まず、身になる勉強をするために、アウトプットを増やしたいと考えました。<br>勉強内容の整理をして記事執筆を行うことで、以下のメリットが得られます。</p>
-<ul>
-<li>文書作成、情報伝達の練習</li>
-<li>内容のより深い理解</li>
+                    <h1 id="システムを構成するサーバーの種類"><a href="#システムを構成するサーバーの種類" class="headerlink" title="システムを構成するサーバーの種類"></a>システムを構成するサーバーの種類</h1><h2 id="記事のねらい"><a href="#記事のねらい" class="headerlink" title="記事のねらい"></a>記事のねらい</h2><ul>
+<li>システム開発におけるサーバーを大まかに整理する</li>
+<li>3階層型アーキテクチャのサーバーの種類を整理する</li>
+<li>参画するプロジェクトで扱うシステムについて理解しやすくする</li>
 </ul>
-<p>会社を通すことで、執筆内容の質を担保する必然性が生まれます。<br>編集担当者の目も通すので、フィードバックも貰えます。</p>
-<p>以上のことから、“読んでも書いても学びに繋がる”をコンセプトに、ブログ運営を始めます。</p>
-<p>社員M</p>
+<h2 id="サーバーとは？"><a href="#サーバーとは？" class="headerlink" title="サーバーとは？"></a>サーバーとは？</h2><p>分割型アーキテクチャ（複数のコンピュータを組み合わせて1つのシステムを構築する仕組み）で利用されるコンピュータ。コンピュータそのものを指すこともあり、コンピュータで動くソフトウェアを指すこともある。前者の場合は物理サーバーと言う。</p>
+<p>※分割型アーキテクチャには垂直分割型アーキテクチャと水平分割型アーキテクチャがあり、垂直分割型アーキテクチャには、クライアント・サーバ型アーキテクチャや3階層型アーキテクチャがある。</p>
+<p>※物理サーバーは仮想化やクラウドを利用する場合、仮想サーバーが相当する。</p>
+<h2 id="サーバーの種類と役割（3階層型アーキテクチャの場合）"><a href="#サーバーの種類と役割（3階層型アーキテクチャの場合）" class="headerlink" title="サーバーの種類と役割（3階層型アーキテクチャの場合）"></a>サーバーの種類と役割（3階層型アーキテクチャの場合）</h2><ul>
+<li><p>Webサーバー<br>クライアント（PC）のWebブラウザからの要求（リクエスト）により、静的コンテンツ（HTML、画像など）と動的コンテンツを提供する。動的コンテンツはAPサーバーに要求する。<br>主な製品：Apache HTTP Server, IIS, Nginxなど</p>
+</li>
+<li><p>APサーバー（アプリケーションサーバー）<br>Webサーバーからの要求により、アプリケーションや動的コンテンツ（掲示板の書き込みなど）を提供する。データベースへの接続が必要な場合、DBサーバーに要求する。<br>※DBサーバーへの要求はSQLで行われる。<br>主な製品：Cosminexus Application Server, JBoss, Tomcat, WebLogic Server, WebSphere Application Server, Interstage Application Serverなど</p>
+</li>
+<li><p>DBサーバー（データベースサーバー）<br>APサーバーからの要求で受け取ったSQLを解析し、データアクセス方式を決定し、キャッシュメモリやディスクから必要なデータを集め、APサーバーに提供する。<br>※データベースが配置されたサーバー。<br>主な製品：Oracle Database, MySQL, PostgreSQL, SQL Server, DB2, Symfoware Serverなど</p>
+</li>
+</ul>
+<p>※システムによってはWebサーバーとAPサーバーが統合されていたり、Webサーバーがなかったりする。</p>
+<h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><ul>
+<li>システムを構成する複数のコンピュータを単体でサーバーと呼ぶ</li>
+<li>サーバーにはWebサーバー、APサーバー、DBサーバーがある</li>
+<li>データの流れはクライアント→Webサーバー→APサーバー→DBサーバー→APサーバー→Webサーバー→クライアント</li>
+</ul>
+<h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p>山崎泰史（2019）『絵で見てわかるITインフラの仕組み 新装版』 翔泳社<br><a target="_blank" rel="noopener" href="https://www.atmarkit.co.jp/ait/articles/0101/16/news003.html">Webの仕組みとWebサーバの構造：ApacheによるWebサーバ構築（2）（1/2 ページ） - ＠IT (atmarkit.co.jp)</a><br><a target="_blank" rel="noopener" href="https://thinkit.co.jp/article/11526">ITインフラの全体像を理解しよう | Think IT（シンクイット）</a><br><a target="_blank" rel="noopener" href="https://thinkit.co.jp/article/11837">ミドルウェア(Web、AP、DB)について知ろう | Think IT（シンクイット）</a></p>
 
                     
                     <!-- Tags Bottom -->
