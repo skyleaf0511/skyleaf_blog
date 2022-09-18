@@ -1,0 +1,25 @@
+
+mkdirコマンドは、指定したディレクトリの作成を行う。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+<div id = "example"><h4>mkdir 新規作成するディレクトリパス</h4></div>
+
+<br>
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3> $ <input type = text value = "mkdir /home/User/Documents/New_Directory"></input></h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628172107_44315979.PNG?redirect=false">
+<br>
+例では、新規ディレクトリとして/home/User直下にNew_Directoryという名前のディレクトリを指定し、図では、C:\Users\User\Documentsフォルダ内で右クリックから新規作成>フォルダの選択に相当する。
+
+<br>
+
+<br>

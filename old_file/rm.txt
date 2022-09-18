@@ -1,0 +1,24 @@
+
+rmコマンドは、指定のファイルを削除する。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+
+<div id = "example"><h4>rm 指定のファイルパス</h4></div>
+
+<br>
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3> $ <input type = text value = "rm home/User/Documents/Skyleaf.mp3"></h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628172602_32316742.PNG?redirect=false">
+<br>
+例では、home/User/DocumentsディレクトリにあるSkyleaf.mp3を削除し、図では、C:\Users\User\DocumentsフォルダにあるSkyleaf.mp3を削除している。
+
+<br><br>

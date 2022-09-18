@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="ファイル・ディレクトリ操作を行う基本的なLinuxコマンド
+
+
+
+
+1. Linuxを初めて扱うときの問題
+WindowsやMacでは、ファイルやフォルダの操作をグラフィック、マウスポインタなど視覚的かつ直感的なアプローチから行える。
+一方Linuxでは、全ての操作をコマンドという文字の入力(以降「">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Skyleaf">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="ファイル・ディレクトリ操作を行う基本的なLinuxコマンド"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="SkyleafBlog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>ファイル・ディレクトリ操作を行う基本的なLinuxコマンド - SkyleafBlog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-186358407-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="SkyleafBlog">
+            <img src="https://f.easyuploader.app/eu-prd/upload/20200823141906_6e3067793936347a667a.png" class="dib h3" alt="SkyleafBlog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">ファイル・ディレクトリ操作を行う基本的なLinuxコマンド</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-06-08</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-leaf"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+
+                    <!-- Main Post Content -->
+                    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<h1> ファイル・ディレクトリ操作を行う基本的なLinuxコマンド</h1>
+
+<br>
+<br>
+
+<h2>1. Linuxを初めて扱うときの問題</h2>
+<p>WindowsやMacでは、ファイルやフォルダの操作をグラフィック、マウスポインタなど視覚的かつ直感的なアプローチから行える。</p>
+<p>一方Linuxでは、全ての操作をコマンドという文字の入力(以降「コマンド操作」)のみで実現しているため、初めて扱うときに戸惑う人が大半だと考えられる。</p>
+<p>そこで、本記事では、コマンド操作をWindows、Macにおける従来の視覚的な表現とともに紹介することにより、いち早い理解を期待する。</p>
+<p>まず初めに、ファイルやフォルダ(Linuxでは「ディレクトリ」)の操作を紹介する。</p>
+
+<br>
+
+<h2>2. ファイル・ディレクトリの操作</h2>
+
+<p>本章では、なお、PCにサインインしているユーザ名は「User」とする。</p>
+<p>また、エクスプローラーの「C:Users:User」を起点(ホームディレクトリ)として例を紹介する。</p>
+
+<div class = "list1">2.1. pwd (print work directory)</div>
+
+<div class = "listField">
+
+ 
+</div>
+
+<div class = "list2">2.2. cd (change directory)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list3">2.3. mkdir (make directory)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list4">2.4. ls (list)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list5">2.5. mv (move)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list6">2.6. cp (copy)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list7">2.7. rm (remove)</div>
+
+<div class = "listField">
+
+
+</div>
+
+<div class = "list8">2.8. file</div>
+
+<div class = "listField">
+
+
+</div>
+
+<p>次回３.ではコマンドの拡張的な使用法を紹介する。</p>
+<h2 id="3-オプションを使ったコマンドの拡張-工事中"><a href="#3-オプションを使ったコマンドの拡張-工事中" class="headerlink" title="3. オプションを使ったコマンドの拡張(工事中)"></a>3. オプションを使ったコマンドの拡張(工事中)</h2><script>
+
+$(".listField").hide();
+
+$(function(){
+
+    $(document).ajaxStart(function (){
+    
+        $.get("/old_file/pwd.txt");
+
+    });
+
+    $(document).ajaxError(function(event, XHR, set, ex){
+    
+        alert(ex);
+    
+    });
+    
+    $(".list1").click(function(){
+    
+        $.get("/old_file/pwd.txt", function(data,){
+        
+            $(".list1").next().html(data).slideToggle()
+        
+        });
+    
+    });
+    
+    $(".list2").click(function(){
+    
+        $.get("/old_file/cd.txt", function(data,){
+        
+            $(".list2").next().html(data).slideToggle()
+        
+        });
+    
+    });
+    
+    $(".list3").click(function(){
+    
+        $.get("/old_file/mkdir.txt", function(data,){
+        
+            $(".list3").next().html(data).slideToggle()
+        
+        });
+    
+    });
+    
+    $(".list4").click(function(){
+    
+        $.get("/old_file/ls.txt", function(data,){
+        
+            $(".list4").next().html(data).slideToggle()
+        
+        });
+    
+    });
+    
+    $(".list5").click(function(){
+    
+        $.get("/old_file/mv.txt", function(data,){
+        
+            $(".list5").next().html(data).slideToggle()
+        
+        });
+    
+    });
+    
+    $(".list6").click(function(){
+    
+        $.get("/old_file/cp.txt", function(data,){
+        
+            $(".list6").next().html(data).slideToggle()
+        
+        });
+    
+    });
+    
+    $(".list7").click(function(){
+    
+        $.get("/old_file/rm.txt", function(data,){
+        
+            $(".list7").next().html(data).slideToggle()
+        
+        });
+    
+    });
+    
+    $(".list8").click(function(){
+    
+        $.get("/old_file/file.txt", function(data,){
+        
+            $(".list8").next().html(data).slideToggle()
+        
+        });
+    
+    });
+
+    $(".list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8").hover(function (){
+    
+        $(this).css("backgroundColor", "lightgreen").css("color", "black");
+        
+    
+    },function(){
+    
+        $(this).css("backgroundColor", "green").css("color", "white");
+        
+    
+    });
+    
+    $(".list").hover(function() {
+        $(this).next("span").animate({opacity: "show", top: "-75"}, "slow");}, function() {
+      $(this).next("span").animate({opacity: "hide", top: "-85"}, "fast");
+    });
+    
+});
+
+</script>
+
+<style type = "text/css">
+    
+    #inputField {
+    
+        background-color :#000000;
+        color :#ffffff;
+        width : 100%;
+    
+    }
+
+    input {
+    
+        background-color :#000000;
+        color :#ffffff;
+        width : 97.5%;
+        
+    }
+    
+    p {
+    
+        font-family: "Arial", "メイリオ" ;
+    
+    }
+    
+    h1, h2, h3 {
+    
+        font-family: "MS Pゴシック" ;
+        
+    }
+    
+    .list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8 {
+
+        background-color: green;
+        color : white;
+
+        padding-top : 8px;
+        padding-bottom : 8px;
+        padding-left : 8px;
+        margin-top : 4px;
+        font-size : 18px
+        
+    
+    }
+    
+    .listField {
+    
+        border-style: outset;
+        padding-left : 8px;
+        padding-right : 8px;
+    
+    }
+    
+    #example {
+    
+        border-style : ridge;
+        padding-left : 8px;
+    
+    }
+
+</style>
+                    
+                    <!-- Tags Bottom -->
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://f.easyuploader.app/eu-prd/upload/20210115233150_6b7462435276386259684f4434536e4d.png" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Skyleaf">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>最近の投稿</h3>
+    
+        <p>
+            <a href="/2022/09/18/%E3%80%90%E7%A4%BE%E5%86%85WEB%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%80%91%E8%A6%81%E4%BB%B6%E5%AE%9A%E7%BE%A9%E3%82%92%E3%82%84%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/">【社内WEBアプリ開発】要件定義をやりました</a>
+        </p>
+    
+        <p>
+            <a href="/2021/06/08/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%BB%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%93%8D%E4%BD%9C%E3%82%92%E8%A1%8C%E3%81%86%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AALinux%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/">ファイル・ディレクトリ操作を行う基本的なLinuxコマンド</a>
+        </p>
+    
+        <p>
+            <a href="/2021/05/12/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AE%E7%A8%AE%E9%A1%9E/">システムを構成するサーバーの種類</a>
+        </p>
+    
+        <p>
+            <a href="/2021/04/01/%E6%B1%BA%E5%AE%9A%E8%A1%A8%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%82%92%E3%81%99%E3%82%8B/">決定表でテストをする</a>
+        </p>
+    
+        <p>
+            <a href="/2021/02/24/%EF%BD%9E%E3%81%A0%E3%82%8C%E3%81%A7%E3%82%82%E5%88%86%E3%81%8B%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E4%BD%9C%E3%82%89%E3%82%8C%E3%81%9F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%EF%BD%9E%E3%80%90%E7%AC%AC%EF%BC%91%E8%A9%B1%E3%80%91/">Java物語 ～だれでも分かるように作られたプログラミング言語～【第１話】</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/skyleafblog" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://skyleaf.co.jp/" target="_blank">
+                            <i class="fa fa-leaf"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Skyleaf. All right reserved | Design & Hexo <a class="link dim white" target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>

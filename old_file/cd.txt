@@ -1,0 +1,35 @@
+cdコマンドは、指定したディレクトリをカレントディレクトリとして変更できる。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+
+<div id = "example"><h4>cd 移動先のディレクトリパス<h4></div>
+
+<br>
+
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3> $ <input type = text value = "cd /home/User/Documents"></input></h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628171647_72723369.PNG?redirect=false">
+<br>
+例では、変更後のディレクトリとして、home/User直下にあるDocumentsを指定し、図ではC:\Users\User直下にあるDocumentsフォルダのダブルクリックに相当する。
+cdコマンド実行後、カレントディレクトリが指定したパスに変更されているかpwdコマンドを実行することで確認できる。
+
+<b>実行例</b>
+<div id = "inputField">
+
+<h3> $ <input type = text value = "pwd"></input>
+/home/User/Documents
+</h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628171905_7345524e.PNG?redirect=false">
+<br>

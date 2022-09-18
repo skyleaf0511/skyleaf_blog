@@ -1,0 +1,27 @@
+pwdコマンドは、現在の場所(カレントディレクトリ)の確認ができる。
+
+<br>
+<br>
+<b>構文</b>
+<br>
+
+<div id = "example"><h4>pwd<h4></div>
+
+<br>
+
+<b>実行例</b>
+
+<div id = "inputField">
+
+<h3> $ <input type = text value = "pwd"></input>
+/home/User
+</h3>
+
+</div>
+
+<img src = "https://f.easyuploader.app/20210628171408_595a6e32.PNG?redirect=false">
+<br>
+例では、カレントディレクトリが/home/Userを示し、図では、C:\Users\Userがカレントディレクトリに相当する。
+
+<br>
+<br>
