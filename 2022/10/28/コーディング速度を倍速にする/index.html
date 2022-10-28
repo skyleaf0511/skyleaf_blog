@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="本記事の目的私たちエンジニアは、割り振られた作業で手いっぱいの中、不測の事態には調査も即座に行えなければなりません。また、他人に教授を仰ぎたい時、IDEの操作が遅いゆえに時間を無碍に奪ってしまう問題もあるのです。
+そこで本記事では、Eclipseの操作を倍速化することでコーディングの速度と操作の向上">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Skyleaf">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="コーディング速度を倍速にする"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="SkyleafBlog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>コーディング速度を倍速にする - SkyleafBlog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-186358407-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="SkyleafBlog">
+            <img src="https://f.easyuploader.app/eu-prd/upload/20200823141906_6e3067793936347a667a.png" class="dib h3" alt="SkyleafBlog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">コーディング速度を倍速にする</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2022-10-28</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-leaf"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="本記事の目的"><a href="#本記事の目的" class="headerlink" title="本記事の目的"></a>本記事の目的</h1><p>私たちエンジニアは、割り振られた作業で手いっぱいの中、不測の事態には調査も即座に行えなければなりません。<br>また、他人に教授を仰ぎたい時、IDEの操作が遅いゆえに時間を無碍に奪ってしまう問題もあるのです。</p>
+<p>そこで本記事では、Eclipseの操作を倍速化することでコーディングの速度と操作の向上を目指します。</p>
+<h2 id="ECLIPSEの操作を効率化する"><a href="#ECLIPSEの操作を効率化する" class="headerlink" title="ECLIPSEの操作を効率化する"></a>ECLIPSEの操作を効率化する</h2><p>ECLIPSEのショートカットキーを使いながら学びましょう。</p>
+<h3 id="1-Javaプロジェクトを作成"><a href="#1-Javaプロジェクトを作成" class="headerlink" title="1. Javaプロジェクトを作成"></a>1. Javaプロジェクトを作成</h3><p>プロジェクト「操作練習」を作成します。</p>
+<h4 id="Ctrl-N"><a href="#Ctrl-N" class="headerlink" title="Ctrl + N"></a><code>Ctrl + N</code></h4><p><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/create_project.png" alt="新規作成ウィザード"><br>プロジェクトと同じ要領でMainクラスも作成します。<br><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/view_class.png" alt="Mainクラス"></p>
+<h3 id="2-予測からコードを補完"><a href="#2-予測からコードを補完" class="headerlink" title="2. 予測からコードを補完"></a>2. 予測からコードを補完</h3><p>エントリーポイントである<code>public static void main(String[] args)</code>を予測候補から補完します。</p>
+<h4 id="Ctrl-Space"><a href="#Ctrl-Space" class="headerlink" title="Ctrl + Space"></a><code>Ctrl + Space</code></h4><p>mainまで入力して<code>Ctrl + Space</code>で”main”から予測される定型文やクラス、メソッド候補を補完することが出来ます。<br><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/predict_code.png" alt="予測表示"></p>
+<h3 id="3-ファイル内検索"><a href="#3-ファイル内検索" class="headerlink" title="3. ファイル内検索"></a>3. ファイル内検索</h3><p>表示中のファイル内から特定の文字列を検索できます</p>
+<h4 id="Ctrl-F"><a href="#Ctrl-F" class="headerlink" title="Ctrl + F"></a><code>Ctrl + F</code></h4><p><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/find_string.png" alt="ファイル内検索"><br>置換処理もできます。<br><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/replace.png" alt="置換処理"></p>
+<h3 id="4-自動インポート"><a href="#4-自動インポート" class="headerlink" title="4. 自動インポート"></a>4. 自動インポート</h3><p>コーディングしたクラスからパッケージを予測して自動でインポートを補完します。</p>
+<h4 id="Ctrl-Shift-O"><a href="#Ctrl-Shift-O" class="headerlink" title="Ctrl + Shift + O"></a><code>Ctrl + Shift + O</code></h4><h3 id="5-フォーマット"><a href="#5-フォーマット" class="headerlink" title="5. フォーマット"></a>5. フォーマット</h3><p>インデントや改行を自動で訂正します。</p>
+<h4 id="Ctrl-Shift-F"><a href="#Ctrl-Shift-F" class="headerlink" title="Ctrl + Shift + F"></a><code>Ctrl + Shift + F</code></h4><h3 id="6-ブロックの開始・終了に移動"><a href="#6-ブロックの開始・終了に移動" class="headerlink" title="6. ブロックの開始・終了に移動"></a>6. ブロックの開始・終了に移動</h3><p>ブロックの開始・終了行にジャンプします。</p>
+<h4 id="Ctrl-Shift-P"><a href="#Ctrl-Shift-P" class="headerlink" title="Ctrl + Shift + P"></a><code>Ctrl + Shift + P</code></h4><h3 id="7-メソッドの宣言部に移動"><a href="#7-メソッドの宣言部に移動" class="headerlink" title="7. メソッドの宣言部に移動"></a>7. メソッドの宣言部に移動</h3><p>フォーカス行のメソッドの宣言部にジャンプします</p>
+<h4 id="Ctrl-Shift-↑"><a href="#Ctrl-Shift-↑" class="headerlink" title="Ctrl + Shift + ↑"></a><code>Ctrl + Shift + ↑</code></h4><h3 id="8-呼び出し先に移動"><a href="#8-呼び出し先に移動" class="headerlink" title="8. 呼び出し先に移動"></a>8. 呼び出し先に移動</h3><p>フォーカス中のクラスやメソッド、変数の呼び出し箇所にジャンプします</p>
+<h4 id="F3"><a href="#F3" class="headerlink" title="F3"></a><code>F3</code></h4><h3 id="9-前回いた場所に移動"><a href="#9-前回いた場所に移動" class="headerlink" title="9. 前回いた場所に移動"></a>9. 前回いた場所に移動</h3><p>前回までにいた場所に戻ります。</p>
+<h4 id="Alt-←"><a href="#Alt-←" class="headerlink" title="Alt + ←"></a><code>Alt + ←</code></h4><h3 id="10-現在地点より未来にいた場所に進む"><a href="#10-現在地点より未来にいた場所に進む" class="headerlink" title="10. 現在地点より未来にいた場所に進む"></a>10. 現在地点より未来にいた場所に進む</h3><p><code>Alt + ←</code>で戻った地点を現在地点として、未来にいた場所にジャンプします。</p>
+<h4 id="Alt-→"><a href="#Alt-→" class="headerlink" title="Alt + →"></a><code>Alt + →</code></h4><h3 id="11-呼び出し元を検索"><a href="#11-呼び出し元を検索" class="headerlink" title="11. 呼び出し元を検索"></a>11. 呼び出し元を検索</h3><p>フォーカス中のクラスやメソッドが呼び出されている箇所を検索します。<br><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/search_caller.png" alt="呼び出し元検索"></p>
+<h4 id="Ctrl-Alt-H"><a href="#Ctrl-Alt-H" class="headerlink" title="Ctrl + Alt + H"></a><code>Ctrl + Alt + H</code></h4><p>検索結果から選択することでもびだし元に移動もできます。</p>
+<h3 id="12-シグネチャを確認"><a href="#12-シグネチャを確認" class="headerlink" title="12. シグネチャを確認"></a>12. シグネチャを確認</h3><p>フォーカス中のクラスやメソッド、変数の情報を確認します。</p>
+<h4 id="F2"><a href="#F2" class="headerlink" title="F2"></a><code>F2</code></h4><h3 id="13-ファイル検索"><a href="#13-ファイル検索" class="headerlink" title="13. ファイル検索"></a>13. ファイル検索</h3><p>ワークスペース内のファイルを検索します。</p>
+<h4 id="Ctrl-Shift-R"><a href="#Ctrl-Shift-R" class="headerlink" title="Ctrl + Shift + R"></a><code>Ctrl + Shift + R</code></h4><p><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/search_resource.png" alt="ファイル検索"></p>
+<h3 id="14-クラス検索"><a href="#14-クラス検索" class="headerlink" title="14. クラス検索"></a>14. クラス検索</h3><p>プロジェクト内のクラスを検索します。</p>
+<h4 id="Ctrl-Shift-T"><a href="#Ctrl-Shift-T" class="headerlink" title="Ctrl + Shift + T"></a><code>Ctrl + Shift + T</code></h4><p><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/search_class.png" alt="クラス検索"><br>ファイル検索との違いは、クラス検索はクラスファイルも検索対象になる点です。<br>これにより、jarなどのライブラリの検索も行えます。</p>
+<h3 id="15-コメントアウト"><a href="#15-コメントアウト" class="headerlink" title="15. コメントアウト"></a>15. コメントアウト</h3><p>フォーカス行をコメントアウトします。<br><code>Ctrl + /</code></p>
+<h3 id="16-Javaドキュメントを作成"><a href="#16-Javaドキュメントを作成" class="headerlink" title="16. Javaドキュメントを作成"></a>16. Javaドキュメントを作成</h3><p>複数行や見出しに使用するコメントアウトを作成します。<br><code>/** + Enter</code><br><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/create_javaDoc.png" alt="JavaDoc作成"><br><code>Alt + Shift + J</code>でも作成できますが、Eclipseに限り可能な操作のようです。</p>
+<h3 id="17-行削除"><a href="#17-行削除" class="headerlink" title="17. 行削除"></a>17. 行削除</h3><p>フォーカス行を削除します<br><code>Ctrl + D</code></p>
+<h3 id="18-ヒントを表示"><a href="#18-ヒントを表示" class="headerlink" title="18. ヒントを表示"></a>18. ヒントを表示</h3><p>エラーや警告が出ている行に対して、解決のヒントを表示します。<br><code>Ctrl + 1</code><br><img src="/image/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/view_hint.png" alt="ヒント"></p>
+<h3 id="19-ブレークポイントを配置"><a href="#19-ブレークポイントを配置" class="headerlink" title="19. ブレークポイントを配置"></a>19. ブレークポイントを配置</h3><p>デバッグで処理を停止させるブレークポイントを配置します<br><code>Ctrl + shift + B</code></p>
+<h3 id="20-プロジェクトの更新"><a href="#20-プロジェクトの更新" class="headerlink" title="20. プロジェクトの更新"></a>20. プロジェクトの更新</h3><p>プロジェクトのファイルを再読み込みし、最新化します。<br><code>F5</code></p>
+<h3 id="21-ビルド"><a href="#21-ビルド" class="headerlink" title="21. ビルド"></a>21. ビルド</h3><p>プロジェクトをビルド(コンパイル)します<br><code>Ctrl + B</code></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://f.easyuploader.app/eu-prd/upload/20210115233150_6b7462435276386259684f4434536e4d.png" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Skyleaf">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>最近の投稿</h3>
+    
+        <p>
+            <a href="/2022/10/28/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E9%80%9F%E5%BA%A6%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/">コーディング速度を倍速にする</a>
+        </p>
+    
+        <p>
+            <a href="/2022/10/28/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/">Windowsの操作を倍速にする</a>
+        </p>
+    
+        <p>
+            <a href="/2021/06/08/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%BB%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%93%8D%E4%BD%9C%E3%82%92%E8%A1%8C%E3%81%86%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AALinux%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/">ファイル・ディレクトリ操作を行う基本的なLinuxコマンド</a>
+        </p>
+    
+        <p>
+            <a href="/2021/05/12/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AE%E7%A8%AE%E9%A1%9E/">システムを構成するサーバーの種類</a>
+        </p>
+    
+        <p>
+            <a href="/2021/04/01/%E6%B1%BA%E5%AE%9A%E8%A1%A8%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%82%92%E3%81%99%E3%82%8B/">決定表でテストをする</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/skyleafblog" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://skyleaf.co.jp/" target="_blank">
+                            <i class="fa fa-leaf"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Skyleaf. All right reserved | Design & Hexo <a class="link dim white" target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>

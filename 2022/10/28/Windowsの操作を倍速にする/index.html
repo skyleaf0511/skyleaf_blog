@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="本記事の目的私たちエンジニアは、割り振られた作業で手いっぱいの中、定常業務やその他作業もこなしていかなければなりません。そんな中、これら作業に依存するWindowsの操作が遅ければ、例えコーディングが早かったとしても総合的に遅れが発生してしまう問題が発生します。また、他人に教授を仰ぎたい時、Wind">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Skyleaf">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Windowsの操作を倍速にする"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="SkyleafBlog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Windowsの操作を倍速にする - SkyleafBlog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-186358407-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="SkyleafBlog">
+            <img src="https://f.easyuploader.app/eu-prd/upload/20200823141906_6e3067793936347a667a.png" class="dib h3" alt="SkyleafBlog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Windowsの操作を倍速にする</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2022-10-28</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-leaf"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="本記事の目的"><a href="#本記事の目的" class="headerlink" title="本記事の目的"></a>本記事の目的</h1><p>私たちエンジニアは、割り振られた作業で手いっぱいの中、定常業務やその他作業もこなしていかなければなりません。<br>そんな中、これら作業に依存するWindowsの操作が遅ければ、例えコーディングが早かったとしても総合的に遅れが発生してしまう問題が発生します。<br>また、他人に教授を仰ぎたい時、Windowsの操作が遅いゆえに時間を無碍に奪ってしまう問題もあるのです。</p>
+<p>そこで本記事では、Windowsの操作を倍速化することでベースの作業の速度を向上させ、総合的に作業の効率化の達成を目指します。</p>
+<h2 id="エクスプローラーの操作を効率化する"><a href="#エクスプローラーの操作を効率化する" class="headerlink" title="エクスプローラーの操作を効率化する"></a>エクスプローラーの操作を効率化する</h2><p>エクスプローラーの基本操作をショートカットキーや便利な操作を使いながら学びます。<br>フォルダ移動、ファイルの作成・編集までを効率化します。<br>出来る限りマウスを使わない操作を心掛けてみましょう。</p>
+<h3 id="1-エクスプローラーを起動"><a href="#1-エクスプローラーを起動" class="headerlink" title="1. エクスプローラーを起動"></a>1. エクスプローラーを起動</h3><p>エクスプローラーを起動します。</p>
+<h4 id="Windows-E"><a href="#Windows-E" class="headerlink" title="Windows + E"></a><code>Windows + E</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/default_window.png" alt="エクスプローラーを起動"></p>
+<h3 id="2-ウィンドウを拡大・縮小"><a href="#2-ウィンドウを拡大・縮小" class="headerlink" title="2. ウィンドウを拡大・縮小"></a>2. ウィンドウを拡大・縮小</h3><p>エクスプローラーウィンドウを全体表示します。</p>
+<h4 id="Windows-↑"><a href="#Windows-↑" class="headerlink" title="Windows + ↑"></a><code>Windows + ↑</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/expansion_window.png" alt="全体表示"></p>
+<ul>
+<li>通常表示は<code>Windows + ↓</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/default_window.png" alt="通常表示"></li>
+<li>左寄せは<code>Windows + ←</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/left_align_window.png" alt="左寄せ"></li>
+<li>右寄せは<code>Windows + →</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/right_align_window.png" alt="右寄せ"></li>
+</ul>
+<h3 id="3-フォルダを移動"><a href="#3-フォルダを移動" class="headerlink" title="3. フォルダを移動"></a>3. フォルダを移動</h3><p>エクスプローラーを起動させるとクイックアクセスが初期表示されます。<br>一覧に「ドキュメント」があるので、選択してドキュメントフォルダに移動します。</p>
+<ul>
+<li>ファイルの選択は <code>↑↓</code></li>
+<li>ファイルの実行(決定)は <code>Enter</code></li>
+</ul>
+<p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/select_documents.png" alt="ドキュメントショートカットを選択"></p>
+<h3 id="4-新規フォルダを作成"><a href="#4-新規フォルダを作成" class="headerlink" title="4. 新規フォルダを作成"></a>4. 新規フォルダを作成</h3><p>ドキュメントフォルダ下に新規フォルダを作成します。</p>
+<h4 id="Ctrl-Shift-N"><a href="#Ctrl-Shift-N" class="headerlink" title="Ctrl + Shift + N"></a><code>Ctrl + Shift + N</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/create_new_folder.png" alt="新規フォルダを作成"></p>
+<h3 id="5-フォルダ名を変更"><a href="#5-フォルダ名を変更" class="headerlink" title="5. フォルダ名を変更"></a>5. フォルダ名を変更</h3><p>新規作成したフォルダ名を変更できる状態になっているので、初期状態のままで決定します。<br>改めて、作成したフォルダを「操作練習」に改名します。</p>
+<h4 id="F2"><a href="#F2" class="headerlink" title="F2"></a><code>F2</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/rename_folder.png" alt="名前を変更"></p>
+<h3 id="6-別窓で開く"><a href="#6-別窓で開く" class="headerlink" title="6. 別窓で開く"></a>6. 別窓で開く</h3><p>「操作練習」フォルダ内に別窓(新しいエクスプローラー)で移動します。</p>
+<h4 id="Ctrl-Enter"><a href="#Ctrl-Enter" class="headerlink" title="Ctrl + Enter"></a><code>Ctrl + Enter</code></h4><h3 id="7-ファイルを作成"><a href="#7-ファイルを作成" class="headerlink" title="7. ファイルを作成"></a>7. ファイルを作成</h3><p>「操作練習」フォルダ下にEXCELファイル「練習.xlsx」を作成します。<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/new_excel.png" alt="EXCELファイルを作成"></p>
+<ol>
+<li><p>コンテキストメニュを起動<br>右クリックで表示されるメニュを起動します<br><code>Shift + F10</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/open_context_menu.png" alt="コンテキストメニュを開く"></p>
+</li>
+<li><p>テキストファイルを作成<br><code>新規作成&gt;EXCELワークシート</code>を選択<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/select_excel.png" alt="EXCELファイルを選択"></p>
+</li>
+</ol>
+<h3 id="8-ファイルを複製"><a href="#8-ファイルを複製" class="headerlink" title="8. ファイルを複製"></a>8. ファイルを複製</h3><p>作成した「練習.xlsx」を複製します。<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/copy_excel.png" alt="EXCELファイルを複製"></p>
+<ol>
+<li><p>ファイルをコピー<br><code>Ctrl + C</code></p>
+</li>
+<li><p>ファイルをペースト<br><code>Ctrl + V</code></p>
+</li>
+</ol>
+<h3 id="9-ファイルを削除する"><a href="#9-ファイルを削除する" class="headerlink" title="9. ファイルを削除する"></a>9. ファイルを削除する</h3><p>複製したファイルを削除します。</p>
+<h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a><code>Delete</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/new_excel.png" alt="EXCELファイルを作成"></p>
+<h3 id="10-操作を元に戻す"><a href="#10-操作を元に戻す" class="headerlink" title="10. 操作を元に戻す"></a>10. 操作を元に戻す</h3><p>削除した操作を元に戻します。</p>
+<h4 id="Ctrl-Z"><a href="#Ctrl-Z" class="headerlink" title="Ctrl + Z"></a><code>Ctrl + Z</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/copy_excel.png" alt="EXCELファイルを複製"></p>
+<h3 id="11-親フォルダパスへ移動"><a href="#11-親フォルダパスへ移動" class="headerlink" title="11. 親フォルダパスへ移動"></a>11. 親フォルダパスへ移動</h3><p>現在のフォルダ階層<code>C:\ユーザー\サインインユーザ名\ドキュメント\操作練習</code>のパスをコピーします。</p>
+<ol>
+<li><p>フォルダパスを入力状態にする<br><code>F4</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/active_folder_path.png" alt="カレントディレクトリを選択"></p>
+</li>
+<li><p>親フォルダパスにアクセス<br><code>C:\ユーザー\サインインユーザ名\ドキュメント\</code></p>
+</li>
+</ol>
+<h3 id="12-前回アクセスしたフォルダに戻る"><a href="#12-前回アクセスしたフォルダに戻る" class="headerlink" title="12. 前回アクセスしたフォルダに戻る"></a>12. 前回アクセスしたフォルダに戻る</h3><p>前回までにアクセスしていたフォルダ<code>C:\ユーザー\サインインユーザ名\ドキュメント\操作練習</code>に戻ります。</p>
+<h4 id="Alt-←"><a href="#Alt-←" class="headerlink" title="Alt + ←"></a><code>Alt + ←</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/access_previous_folder.png" alt="前回アクセスしていたフォルダ"><br><code>BaskSpace</code>も同じ処理が出来ます。</p>
+<h3 id="13-現在地点より未来にアクセスしたフォルダへ進む"><a href="#13-現在地点より未来にアクセスしたフォルダへ進む" class="headerlink" title="13. 現在地点より未来にアクセスしたフォルダへ進む"></a>13. 現在地点より未来にアクセスしたフォルダへ進む</h3><p><code>Alt + ←</code>で戻った地点を現在地点として、未来にアクセスしたフォルダ<code>C:\ユーザー\サインインユーザ名\ドキュメント\</code>へ進みます。</p>
+<h4 id="Alt-→"><a href="#Alt-→" class="headerlink" title="Alt + →"></a><code>Alt + →</code></h4><h3 id="14-親フォルダ移動へ移動"><a href="#14-親フォルダ移動へ移動" class="headerlink" title="14. 親フォルダ移動へ移動"></a>14. 親フォルダ移動へ移動</h3><p>一度<code>C:\ユーザー\サインインユーザ名\ドキュメント\操作練習</code>にアクセスします。<br>ショートカットキーを用いて、親フォルダ<code>C:\ユーザー\サインインユーザ名\ドキュメント\</code>にアクセスします。</p>
+<h4 id="Alt-↑"><a href="#Alt-↑" class="headerlink" title="Alt + ↑"></a><code>Alt + ↑</code></h4><h3 id="15-アクティブウィンドウを切り替える"><a href="#15-アクティブウィンドウを切り替える" class="headerlink" title="15. アクティブウィンドウを切り替える"></a>15. アクティブウィンドウを切り替える</h3><p>現在のエクスプローラーから、別窓で開いたエクスプローラーウィンドウに操作対象を切り替えます。</p>
+<h4 id="Alt-Tab"><a href="#Alt-Tab" class="headerlink" title="Alt + Tab"></a><code>Alt + Tab</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/select_window.png" alt="アクティブウィンドウの切り替え"><br>Altキーは押下したまま、Tabキーを押すことでウィンドウを選択することが出来ます。</p>
+<h3 id="16-複数選択"><a href="#16-複数選択" class="headerlink" title="16. 複数選択"></a>16. 複数選択</h3><p>ファイルやフォルダを複数選択します。<br>複製や削除などを一括で実行できる利点があります。</p>
+<h4 id="Shift-選択したい方向キー-↑↓"><a href="#Shift-選択したい方向キー-↑↓" class="headerlink" title="Shift + 選択したい方向キー(↑↓)"></a><code>Shift + 選択したい方向キー(↑↓)</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/multiple_selection.png" alt="ファイルを複数選択"><br>選択したファイルをコピーしてみましょう。<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/multiple_copy.png" alt="複数ファイルを一括コピー"></p>
+<h3 id="17-クリップボード"><a href="#17-クリップボード" class="headerlink" title="17. クリップボード"></a>17. クリップボード</h3><p>直近20件までのコピー(<code>Ctrl + C</code>)した文字・画像を呼び出し、貼り付けすることが出来ます。</p>
+<h4 id="Windows-V"><a href="#Windows-V" class="headerlink" title="Windows + V"></a><code>Windows + V</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/clipboard.png" alt="クリップボード"></p>
+<h3 id="18-スクリーンショット"><a href="#18-スクリーンショット" class="headerlink" title="18. スクリーンショット"></a>18. スクリーンショット</h3><ul>
+<li>画面を切り抜いてスクショする場合、<code>Windows + Shift + S</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/screen_shot_in_range.png" alt="範囲指定スクショ"></li>
+<li>画面全体をスクショする場合、<code>PrintScreen</code></li>
+<li>画像ファイルに保存する場合、<code>Windows + PrintScreen</code><br><code>C:\ユーザー\サインインユーザ名\ピクチャー\スクリーンショット</code>に保存されます。</li>
+</ul>
+<h3 id="19-全選択"><a href="#19-全選択" class="headerlink" title="19. 全選択"></a>19. 全選択</h3><p>フォルダ下にあるフォルダ・ファイルを全て選択します。</p>
+<h4 id="Ctrl-A"><a href="#Ctrl-A" class="headerlink" title="Ctrl + A"></a><code>Ctrl + A</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/select_all.png" alt="全選択"></p>
+<h3 id="20-先頭へ移動"><a href="#20-先頭へ移動" class="headerlink" title="20. 先頭へ移動"></a>20. 先頭へ移動</h3><p>フォルダ・ファイルの一覧から先頭にフォーカスします。</p>
+<h4 id="Ctrl-home"><a href="#Ctrl-home" class="headerlink" title="Ctrl + home"></a><code>Ctrl + home</code></h4><p><code>Shift</code>を併用することで現在のフォーカスから先頭までのファイルを全選択することも可能です。<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/select_current_to_top.png" alt="先頭まで選択"></p>
+<h3 id="21-末尾へ移動"><a href="#21-末尾へ移動" class="headerlink" title="21. 末尾へ移動"></a>21. 末尾へ移動</h3><p>フォルダ・ファイルの一覧から末尾にフォーカスします。</p>
+<h4 id="Ctrl-End"><a href="#Ctrl-End" class="headerlink" title="Ctrl + End"></a><code>Ctrl + End</code></h4><p><code>Shift</code>を併用することで現在のフォーカスから末尾までのファイルを全選択することも可能です。<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/select_current_to_end.png" alt="末尾まで選択"></p>
+<h3 id="22-再表示-更新"><a href="#22-再表示-更新" class="headerlink" title="22. 再表示(更新)"></a>22. 再表示(更新)</h3><p>現在アクティブなウィンドウを再表示します<br>Webページの再表示に用いられることが多いです。</p>
+<h4 id="F5"><a href="#F5" class="headerlink" title="F5"></a><code>F5</code></h4><h3 id="23-ソフトウェアに設定されているクイックアクセスキーを表示、選択する"><a href="#23-ソフトウェアに設定されているクイックアクセスキーを表示、選択する" class="headerlink" title="23. ソフトウェアに設定されているクイックアクセスキーを表示、選択する"></a>23. ソフトウェアに設定されているクイックアクセスキーを表示、選択する</h3><p>エクスプローラーを含むソフトウェアには、それぞれ固有のクイックアクセスが設定されています。<br><code>Alt</code>を押下することで、割り当てられているアクセスキーが表示、選択することで操作が可能です。<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/quick_access.png" alt="クイックアクセス"></p>
+<h3 id="24-アクティブウィンドウを閉じる"><a href="#24-アクティブウィンドウを閉じる" class="headerlink" title="24. アクティブウィンドウを閉じる"></a>24. アクティブウィンドウを閉じる</h3><p>現在アクティブなウィンドウを閉じます</p>
+<h4 id="Ctrl-W"><a href="#Ctrl-W" class="headerlink" title="Ctrl + W"></a><code>Ctrl + W</code></h4><h3 id="25-アクティブなソフトウェアを終了する"><a href="#25-アクティブなソフトウェアを終了する" class="headerlink" title="25. アクティブなソフトウェアを終了する"></a>25. アクティブなソフトウェアを終了する</h3><p>現在アクティブなソフトウェアを閉じます。<br>エクスプローラーにように複数起動していたウィンドウが全て閉じられます。</p>
+<h4 id="Alt-F4"><a href="#Alt-F4" class="headerlink" title="Alt + F4"></a><code>Alt + F4</code></h4><h3 id="26-ショートカットを作成"><a href="#26-ショートカットを作成" class="headerlink" title="26. ショートカットを作成"></a>26. ショートカットを作成</h3><p>良く開くファイルやフォルダはショートカットを作成し、ショートカットに対しショートカットキーを割り当てます。</p>
+<ol>
+<li><p>作成した「練習.xlsx」の<code>コンテキストメニュ&gt;ショートカットキーを作成</code>を選択<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/create_shortcut.png" alt="ショートカットを作成"></p>
+</li>
+<li><p>生成されたショートカットの<code>コンテキストメニュ&gt;プロパティ</code>を開く<br>   <img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/open_shortcut_property.png" alt="ショートカットのプロパティを開く"></p>
+</li>
+<li><p>ショートカットキーに任意キーを割り当て<br>割り当てると自動で<code>Ctrl + Alt + 任意キー</code>の形になります。</p>
+</li>
+<li><p>ショートカットをデスクトップに貼り付けます。<br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/put_shortcut_in_desktop.png" alt="デスクトップに配置"></p>
+<ul>
+<li>切り取り<code>Ctrl + X</code></li>
+</ul>
+</li>
+<li><p><code>Ctrl + Alt + 任意キー</code>でEXCELファイルを起動します<br>   <img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/open_excel.png" alt="デスクトップに配置"></p>
+</li>
+</ol>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://f.easyuploader.app/eu-prd/upload/20210115233150_6b7462435276386259684f4434536e4d.png" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Skyleaf">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>最近の投稿</h3>
+    
+        <p>
+            <a href="/2022/10/28/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E9%80%9F%E5%BA%A6%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/">コーディング速度を倍速にする</a>
+        </p>
+    
+        <p>
+            <a href="/2022/10/28/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/">Windowsの操作を倍速にする</a>
+        </p>
+    
+        <p>
+            <a href="/2021/06/08/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%BB%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%93%8D%E4%BD%9C%E3%82%92%E8%A1%8C%E3%81%86%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AALinux%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/">ファイル・ディレクトリ操作を行う基本的なLinuxコマンド</a>
+        </p>
+    
+        <p>
+            <a href="/2021/05/12/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AE%E7%A8%AE%E9%A1%9E/">システムを構成するサーバーの種類</a>
+        </p>
+    
+        <p>
+            <a href="/2021/04/01/%E6%B1%BA%E5%AE%9A%E8%A1%A8%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%82%92%E3%81%99%E3%82%8B/">決定表でテストをする</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/skyleafblog" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://skyleaf.co.jp/" target="_blank">
+                            <i class="fa fa-leaf"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Skyleaf. All right reserved | Design & Hexo <a class="link dim white" target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
