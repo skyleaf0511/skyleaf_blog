@@ -46,10 +46,9 @@
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -89,7 +88,7 @@
     
     <nav class="db dt-l w-100 mw8 center border-box pv3">
         <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="SkyleafBlog">
-            <img src="https://f.easyuploader.app/eu-prd/upload/20200823141906_6e3067793936347a667a.png" class="dib h3" alt="SkyleafBlog">
+            <img src="/img/logo.png" class="dib h3" alt="SkyleafBlog">
         </a>
         <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
             
@@ -135,15 +134,50 @@
                     <h1 id="本記事の目的"><a href="#本記事の目的" class="headerlink" title="本記事の目的"></a>本記事の目的</h1><p>私たちエンジニアは、割り振られた作業で手いっぱいの中、定常業務やその他作業もこなしていかなければなりません。<br>そんな中、これら作業に依存するWindowsの操作が遅ければ、例えコーディングが早かったとしても総合的に遅れが発生してしまう問題が発生します。<br>また、他人に教授を仰ぎたい時、Windowsの操作が遅いゆえに時間を無碍に奪ってしまう問題もあるのです。</p>
 <p>そこで本記事では、Windowsの操作を倍速化することでベースの作業の速度を向上させ、総合的に作業の効率化の達成を目指します。</p>
 <h2 id="エクスプローラーの操作を効率化する"><a href="#エクスプローラーの操作を効率化する" class="headerlink" title="エクスプローラーの操作を効率化する"></a>エクスプローラーの操作を効率化する</h2><p>エクスプローラーの基本操作をショートカットキーや便利な操作を使いながら学びます。<br>フォルダ移動、ファイルの作成・編集までを効率化します。<br>出来る限りマウスを使わない操作を心掛けてみましょう。</p>
-<h3 id="1-エクスプローラーを起動"><a href="#1-エクスプローラーを起動" class="headerlink" title="1. エクスプローラーを起動"></a>1. エクスプローラーを起動</h3><p>エクスプローラーを起動します。</p>
-<h4 id="Windows-E"><a href="#Windows-E" class="headerlink" title="Windows + E"></a><code>Windows + E</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/default_window.png" alt="エクスプローラーを起動"></p>
-<h3 id="2-ウィンドウを拡大・縮小"><a href="#2-ウィンドウを拡大・縮小" class="headerlink" title="2. ウィンドウを拡大・縮小"></a>2. ウィンドウを拡大・縮小</h3><p>エクスプローラーウィンドウを全体表示します。</p>
-<h4 id="Windows-↑"><a href="#Windows-↑" class="headerlink" title="Windows + ↑"></a><code>Windows + ↑</code></h4><p><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/expansion_window.png" alt="全体表示"></p>
-<ul>
-<li>通常表示は<code>Windows + ↓</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/default_window.png" alt="通常表示"></li>
-<li>左寄せは<code>Windows + ←</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/left_align_window.png" alt="左寄せ"></li>
-<li>右寄せは<code>Windows + →</code><br><img src="/image/Windows%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/right_align_window.png" alt="右寄せ"></li>
-</ul>
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1. エクスプローラーを起動</button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">エクスプローラーを起動します。
+        <div>
+          <kbd>Windows + E</kbd>
+        <div>
+        <img src = "/image/Windowsの操作を倍速にする/default_window.png"/>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. ウィンドウを拡大・縮小
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        エクスプローラーウィンドウを全体表示します。
+        <div> 
+          <kbd>Windows + ↑</kbd>
+        </div>
+      <img src = "/image/Windowsの操作を倍速にする/expansion_window.png"/>
+      <li>通常表示は<kbd>Windows + ↓</kbd>
+        <img src = "/image/Windowsの操作を倍速にする/default_window.png"/>
+      </li>
+      <li>左寄せは<kbd>Windows + ←</kbd>
+        <img src = "/image/Windowsの操作を倍速にする/left_align_window.png"/>
+      </li>
+      <li>右寄せは<kbd>Windows + →</kbd>
+        <img src = "/image/Windowsの操作を倍速にする/right_align_window.png"/>
+      </li>
+    </div>
+  </div>
+</div>
+
 <h3 id="3-フォルダを移動"><a href="#3-フォルダを移動" class="headerlink" title="3. フォルダを移動"></a>3. フォルダを移動</h3><p>エクスプローラーを起動させるとクイックアクセスが初期表示されます。<br>一覧に「ドキュメント」があるので、選択してドキュメントフォルダに移動します。</p>
 <ul>
 <li>ファイルの選択は <code>↑↓</code></li>
@@ -240,7 +274,7 @@
                     <div class="mt5 mt0-l">
     <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
         <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
-            <img src="https://f.easyuploader.app/eu-prd/upload/20210115233150_6b7462435276386259684f4434536e4d.png" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Skyleaf">
+            <img src="/img/SKY1.png" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Skyleaf">
         </div>
         <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
             
@@ -258,7 +292,7 @@
     <h3>最近の投稿</h3>
     
         <p>
-            <a href="/2022/10/28/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E9%80%9F%E5%BA%A6%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/">コーディング速度を倍速にする</a>
+            <a href="/2022/10/28/Eclipse%E3%81%AE%E6%93%8D%E4%BD%9C%E3%82%92%E5%80%8D%E9%80%9F%E3%81%AB%E3%81%99%E3%82%8B/">Eclipseの操作を倍速にする</a>
         </p>
     
         <p>
@@ -287,31 +321,34 @@
 
 <!-- Footer -->
 <div class="bg-1 ph2 ph5-ns pv5">
-        <div class="mv8">
-            <div class="center tc">
+    <div class="mv8">
+        <div class="center tc">
+            
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://github.com/skyleafblog" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
                 
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://github.com/skyleafblog" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </div>
+                <div class="dib mh3">
+                    <a class="f3 f2-ns white dim" href="https://skyleaf.co.jp/" target="_blank">
+                        <i class="fa fa-leaf"></i>
+                    </a>
+                </div>
                 
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://skyleaf.co.jp/" target="_blank">
-                            <i class="fa fa-leaf"></i>
-                        </a>
-                    </div>
-                
-            </div>
-            <div class="f6 f5-ns center tc white pt5 fw3">
-                @Skyleaf. All right reserved | Design & Hexo <a class="link dim white" target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
-            </div>
+        </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+            @Skyleaf. All right reserved | Design & Hexo <a class="link dim white" target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
         </div>
     </div>
+</div>
 
 <!-- After Footer -->
 <!-- Disqus Comments -->
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 
